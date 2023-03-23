@@ -17,13 +17,38 @@ que reciba como parámetro el valor de “n” y que calcule la serie hasta lleg
 a ese valor.
 Para conocer más acerca de la serie de Fibonacci consultar el siguiente
 link: https://quantdare.com/numeros-de-fibonacci/
-*/
+ */
 package G5extras;
+
+import java.util.Scanner;
 
 public class G5ejercicioExtra7 {
 
     public static void main(String[] args) {
-        // TODO code application logic here
+        // Crear objeto Scanner para leer desde la entrada estándar
+        Scanner input = new Scanner(System.in);
+
+        // Pedir al usuario que ingrese el número de términos de la sucesión de Fibonacci
+        System.out.print("Ingrese el número de términos de la sucesión de Fibonacci -> ");
+        int n = input.nextInt();
+
+        // Crear un vector para almacenar los números de Fibonacci
+        int[] fib = new int[n];
+
+        // Calcular la sucesión de Fibonacci y almacenarla en el vector
+        for (int i = 0; i < n; i++) {
+            if (i == 0 || i == 1) {
+                fib[i] = 1;
+            } else {
+                fib[i] = fib[i - 1] + fib[i - 2];
+            }
+        }
+
+        // Imprimir los términos de la sucesión de Fibonacci
+        System.out.println("Los " + n + " primeros números de la sucesión de Fibonacci son: ");
+        for (int i = 0; i < n; i++) {
+            System.out.print(fib[i] + " ");
+        }
+        System.out.println("");
     }
-    
 }

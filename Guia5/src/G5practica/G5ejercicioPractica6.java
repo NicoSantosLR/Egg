@@ -4,7 +4,7 @@ donde la suma de sus filas, sus columnas y sus diagonales son idénticas. Crear
 un programa que permita introducir un cuadrado por teclado y determine si este
 cuadrado es mágico o no. El programa deberá comprobar que los números
 introducidos son correctos, es decir, están entre el 1 y el 9.
-*/
+ */
 package G5practica;
 
 import java.util.Scanner;
@@ -51,7 +51,7 @@ public class G5ejercicioPractica6 {
             }
         }
         // Analizamos diagonales
-        if (sumaDiagonalInvertida == sumaDiagonalInvertida) {
+        if (sumaDiagonalPrincipal == sumaDiagonalInvertida) {
             analizador = true;
             // Suma horizontales y verticales
             int sumaH = 0, sumaV = 0;
@@ -71,9 +71,9 @@ public class G5ejercicioPractica6 {
                 sumaV = 0;
             }
         }
-        
+
         if (analizador) {
-            System.out.println("La matriz el mágica");
+            System.out.println("La matriz es mágica");
         } else {
             System.out.println("La matriz no es mágica");
         }

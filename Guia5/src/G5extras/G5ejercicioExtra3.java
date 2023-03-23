@@ -11,4 +11,18 @@ public class G5ejercicioExtra3 {
         // TODO code application logic here
     }
     
+    public static int[] relleno(int largo){
+        int[] retorno = new int[largo];
+        for (int i = 0; i < retorno.length; i++) {
+            retorno[i] = (int)(Math.random()*10)+1;
+        }
+        return retorno;
+    }
+    
+    public static void muestra(int[] vector){
+        for (int i = 0; i < vector.length; i++) {
+            System.out.print("[" + vector[i] + "] ");
+        }
+        System.out.println("");
+    }
 }
