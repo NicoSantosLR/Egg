@@ -57,14 +57,13 @@ public class Libro {
         Libro libroCreado = new Libro();
 
         System.out.println("Ingrese ISBN");
-        libroCreado.setISBN(leer.next());
+        this.ISBN = leer.next();
         System.out.println("Ingrese Título");
-        libroCreado.setTitulo(leer.next());
+        this.titulo = leer.nextLine();
         System.out.println("Ingrese Autor");
-        libroCreado.setAutor(leer.next());
+        this.autor = leer.nextLine();
         System.out.println("Ingrese páginas");
-        libroCreado.setPaginas(leer.nextInt());
-        
+        this.paginas = leer.nextInt();
         return libroCreado;
     }
     

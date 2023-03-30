@@ -1,9 +1,14 @@
 package Entidades;
 
+import java.util.Scanner;
+
 public class Circunferencia {
 
     private double radio;
 
+    public Circunferencia() {
+    }
+    
     public Circunferencia(double radio) {
         this.radio = radio;
     }
@@ -16,9 +21,10 @@ public class Circunferencia {
         this.radio = radio;
     }
 
-    public Circunferencia crearCircunferencia(double radio) {
-        Circunferencia circulo = new Circunferencia(getRadio());
-        return circulo;
+    public void crearCircunferencia() {
+        Scanner leer = new Scanner(System.in);
+        System.out.println("Ingrese el radio:");
+        this.radio = leer.nextDouble();
     }
 
     public double area() {
