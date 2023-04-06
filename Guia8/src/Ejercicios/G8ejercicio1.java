@@ -4,7 +4,7 @@ import Entidad.CuentaBancaria;
 import Servicio.CuentaBancariaServicio;
 import java.util.Scanner;
 
-public class G8ejercicio8 {
+public class G8ejercicio1 {
 
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in);
@@ -12,7 +12,7 @@ public class G8ejercicio8 {
         
         CuentaBancaria cuenta1 = servicio.crearCuenta();
         
-        int menu = -1;
+        int menu;
         do {
             System.out.println();
             System.out.println();
