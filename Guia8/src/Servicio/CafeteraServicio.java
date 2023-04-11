@@ -1,12 +1,13 @@
 package Servicio;
 
 import Entidad.Cafetera;
+
 import java.util.Scanner;
 
 public class CafeteraServicio {
 
     Scanner leer = new Scanner(System.in);
-    
+
 
     public int llenarCafetera(Cafetera cafetera) {
         System.out.println("Se llenó la cafetera");

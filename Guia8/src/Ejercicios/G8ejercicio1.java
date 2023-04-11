@@ -2,6 +2,7 @@ package Ejercicios;
 
 import Entidad.CuentaBancaria;
 import Servicio.CuentaBancariaServicio;
+
 import java.util.Scanner;
 
 public class G8ejercicio1 {
@@ -9,9 +10,9 @@ public class G8ejercicio1 {
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in);
         CuentaBancariaServicio servicio = new CuentaBancariaServicio();
-        
+
         CuentaBancaria cuenta1 = servicio.crearCuenta();
-        
+
         int menu;
         do {
             System.out.println();
@@ -23,8 +24,8 @@ public class G8ejercicio1 {
             System.out.println("4. Consultar Saldo");
             System.out.println("5. Consultar Datos");
             System.out.println("0. SALIR");
-            menu=leer.nextInt();
-            switch (menu){
+            menu = leer.nextInt();
+            switch (menu) {
                 case 1:
                     servicio.ingresar(cuenta1);
                     break;
@@ -42,7 +43,7 @@ public class G8ejercicio1 {
                     break;
                 default:
             }
-        }while (menu!=0);
+        } while (menu != 0);
     }
-    
+
 }

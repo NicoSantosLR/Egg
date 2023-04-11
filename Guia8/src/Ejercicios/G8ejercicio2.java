@@ -2,6 +2,7 @@ package Ejercicios;
 
 import Entidad.Cafetera;
 import Servicio.CafeteraServicio;
+
 import java.util.Scanner;
 
 public class G8ejercicio2 {
@@ -47,9 +48,9 @@ public class G8ejercicio2 {
                 case 6:
                     break;
             }
-            
-        } while (menu!=6);
-        
+
+        } while (menu != 6);
+
 
     }
 

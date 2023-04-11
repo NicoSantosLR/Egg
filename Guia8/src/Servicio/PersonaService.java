@@ -1,6 +1,7 @@
 package Servicio;
 
 import Entidad.Persona;
+
 import java.util.Scanner;
 
 public class PersonaService {
@@ -42,5 +43,5 @@ public class PersonaService {
         return estado;
     }
 
-    
+
 }

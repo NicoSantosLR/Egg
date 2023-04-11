@@ -9,7 +9,7 @@ public class G8ejercicioTeorico {
         PersonaService persServicio = new PersonaService();
         Persona nuePersona = persServicio.crearPersona();
         System.out.println(nuePersona.getNombre());
-        
+
     }
-    
+
 }

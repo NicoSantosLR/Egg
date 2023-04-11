@@ -42,6 +42,6 @@ public class CuentaBancaria {
     public String toString() {
         return "CuentaBancaria{" + "numeroCuenta=" + numeroCuenta + ", dniCliente=" + dniCliente + ", saldoActual=" + saldoActual + '}';
     }
-    
-    
+
+
 }
