@@ -34,8 +34,7 @@ public class FechaService {
 
     public void diferencia(Date fecha1, Date fecha2) {
         System.out.println("Diferencia de años:");
-        System.out.println(fecha1.getYear()-fecha2.getYear());
-        System.out.println(Math.abs(fecha1.getYear()-fecha2.getYear()));
+        System.out.println(fecha2.getYear()-fecha1.getYear());
     }
 
     public int diferencia2(Date fechaNacimiento, Date fechaActual) {
@@ -47,4 +46,9 @@ public class FechaService {
         return anios;
     }
     
+    public static int diferencia3(Date fechaNacimiento, Date fechaActual) {
+        long diff = fechaActual.getTime() - fechaNacimiento.getTime();
+        long diffYears = diff / (24 * 60 * 60 * 1000) / 365; // calcula la diferencia en años
+        return (int) diffYears;
+    }
 }
