@@ -48,4 +48,13 @@ public class EstudianteService {
             System.out.println(estudiante);
         }
     }
+    
+    // Mostrar pasando el objeto
+    public void mostrarMayorAlPromedio(Estudiante[] arreglo){
+        String[] estudiantes = promedioMayor(arreglo);
+        System.out.println("Lista de estudiante con nota mayor al promedio:");
+        for (String estudiante : estudiantes) {
+            System.out.println(estudiante);
+        }
+    }
 }

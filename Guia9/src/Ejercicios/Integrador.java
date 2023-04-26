@@ -22,10 +22,11 @@ public class Integrador {
         // imprimimos el promedio
         System.out.println("El promedio es " + service.calcularPromedio(arregloEstudiante));
         // Creamos el vector para guardar los nombres con mayor promedio
-        String[] arribaPromedio = service.promedioMayor(arregloEstudiante);
+        //String[] arribaPromedio = service.promedioMayor(arregloEstudiante);
         // Imprimimos por pantalla
-        service.mostrar(arribaPromedio);
-
+        //service.mostrar(arribaPromedio);
+        // Mostramos pasando vector de objetos
+        service.mostrarMayorAlPromedio(arregloEstudiante);
     }
 
 }
