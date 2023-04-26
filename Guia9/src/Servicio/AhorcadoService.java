@@ -5,19 +5,8 @@ import java.util.Scanner;
 
 public class AhorcadoService {
 
-    /*
-Método encontradas(letra):  que reciba una letra ingresada por el usuario y
-muestre cuantas letras han sido encontradas y cuántas le faltan. Este método
-además deberá devolver true si la letra estaba y false si la letra no estaba,
-ya que, cada vez que se busque una letra que no esté, se le restará uno a sus
-oportunidades.
-Método intentos(): para mostrar cuántas oportunidades le queda al jugador.
-Método juego(): el método juego se encargará de llamar todos los métodos
-previamente mencionados e informará cuando el usuario descubra toda la letraVector
-o se quede sin intentos. Este método se llamará en el main.
-     */    
     Scanner leer = new Scanner(System.in).useDelimiter("\n");
-    
+
     public Ahorcado crearJuego() {
         Ahorcado juego = new Ahorcado();
         System.out.println("Ingrese la palabra a adivinar:");
@@ -31,12 +20,27 @@ o se quede sin intentos. Este método se llamará en el main.
         juego.setCantJugadasMax(leer.nextInt());
         return juego;
     }
-    
+
     public void longitud(Ahorcado ahorcado) {
         System.out.println("Longitud de la palabra: " + ahorcado.getPalabra().length);
     }
-    
-    public boolean buscar(Ahorcado ahorcado, String letra) {
+
+    public void buscar(Ahorcado ahorcado, String letra) {
+        boolean encontrada = false;
+        for (String letraVector : ahorcado.getPalabra()) {
+            if (letraVector.equalsIgnoreCase(letra)) {
+                encontrada = true;
+                break;
+            }
+        }
+        if (encontrada) {
+            System.out.println("Mensaje: La letra pertenece a la palabra");
+        } else {
+            System.out.println("Mensaje: La letra no pertenece a la palabra");
+        }
+    }
+
+    public void encontradas(Ahorcado ahorcado, String letra) {
         boolean encontrada = false;
         int cont = 0;
         for (String letraVector : ahorcado.getPalabra()) {
@@ -47,14 +51,14 @@ o se quede sin intentos. Este método se llamará en el main.
         }
         if (encontrada) {
             ahorcado.setCantLetrasEncontradas(ahorcado.getCantLetrasEncontradas() + cont);
-            System.out.println("La letra pertenece a la palabra");
         } else {
-            System.out.println("La letra no pertenece a la palabra");
+            ahorcado.setCantJugadasMax(ahorcado.getCantJugadasMax() - 1);
         }
-        return encontrada;
+        System.out.println("Numero de letras (encontradas, faltantes): ("
+                + ahorcado.getCantLetrasEncontradas() + "," + (ahorcado.getPalabra().length - ahorcado.getCantLetrasEncontradas()) + ")");
     }
-    
-    public boolean encontradas(Ahorcado ahorcado, String letra) {
-        return true;
+
+    public void intentos(Ahorcado ahorcado) {
+        System.out.println("Numero de oportunidades restantes: " + ahorcado.getCantJugadasMax());
     }
 }
