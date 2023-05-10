@@ -24,6 +24,7 @@ public class G10ejercicio3 {
         AlumnoService service = new AlumnoService();
         ArrayList<Alumno> alumnos = service.crearAlumnos();
         service.mostrarAlumnos(alumnos);
+        service.notaFinal(alumnos);
     }
 
 }

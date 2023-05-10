@@ -19,10 +19,8 @@ public class AlumnoService {
         ArrayList<Alumno> alumnos = new ArrayList(); // el que voy a retornar
         boolean continuar = true; // Para seguir cargando los alumnos
         while (continuar) {
-            Alumno alumno = new Alumno(); // El alumno a crear
             System.out.println("Ingrese el nombre del Alumno: ");
             String nombre = leer.next();
-            alumno.setNombre(nombre); // setea al objeto alumno el nombre
             ArrayList<Integer> notas = new ArrayList<>(); // Un arraylist de las notas
             System.out.println("Ingrese las notas de " + nombre + ":");
             for (int i = 0; i < 3; i++) {
@@ -30,7 +28,7 @@ public class AlumnoService {
                 int nota = leer.nextInt();
                 notas.add(nota);
             }
-            alumno.setNotas(notas); // setea las notas al objeto alumno
+            Alumno alumno = new Alumno(nombre, notas);
             alumnos.add(alumno); // setea al arraylist de alumnos
             System.out.println("¿Desea agregar otro Alumno? (S/N)");
             continuar = leer.next().equalsIgnoreCase("s");
@@ -41,19 +39,53 @@ public class AlumnoService {
 
     public void mostrarAlumnos(ArrayList<Alumno> alumnos) {
         alumnos.forEach((alumno) -> {
-            System.out.println(alumno);
+            System.out.println(alumno.getNombre());
+            ArrayList<Integer> notas = alumno.getNotas();
+            notas.forEach((nota) -> {
+                System.out.println(nota);
+            });
         });
-        /*for (Alumno alumno : alumnos) {
-        System.out.println(alumno);
-        }*/
     }
 
     public void notaFinal(ArrayList<Alumno> alumnos) {
-        Iterator<Alumno> it = alumnos.iterator();
         boolean encontrado = false;
         System.out.println("Ingrese el alumno a calcular la nota final:");
         String nombre = leer.next();
-        
+        for (Alumno alumno : alumnos) {
+            if (alumno.getNombre().equalsIgnoreCase(nombre)) {
+                encontrado = true;
+                ArrayList<Integer> notas = alumno.getNotas();
+                int suma = 0;
+                for (int nota : notas) {
+                    suma += nota;
+                }
+                System.out.println("El promedio del alumno es " + suma / notas.size());
+            }
+        }
+//        Iterator<Alumno> it = alumnos.iterator();
+//        boolean encontrado = false;
+//        System.out.println("Ingrese el alumno a calcular la nota final:");
+//        String nombre = leer.next();
+//        for (Alumno alumno : alumnos) {
+//            if (alumno.getNombre().equalsIgnoreCase(nombre)) {
+//                ArrayList<Integer> notas = alumno.getNotas();
+//                encontrado = true;
+//                int suma = 0;
+//                suma = notas.stream().map((nota) -> nota).reduce(suma, Integer::sum);
+//                System.out.println("El promedio del alumno es " + suma / 3);
+//                /*
+//                for (Integer nota : notas) {
+//                    suma += nota;
+//                }
+//                System.out.println("El promedio del alumno es " + suma / 3);
+//                */
+//                     
+//            }
+//        }
+        if (!encontrado) {
+            System.out.println("Alumno no encontrado");
+        }
+
     }
 
 }

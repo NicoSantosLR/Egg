@@ -10,10 +10,11 @@ public class Alumno {
     public Alumno() {
     }
 
-    public Alumno(String nombreString, ArrayList<Integer> notas) {
-        this.nombre = nombreString;
-        this.notas = new ArrayList<>(3);
+    public Alumno(String nombre, ArrayList<Integer> notas) {
+        this.nombre = nombre;
+        this.notas = notas;
     }
+
 
     public String getNombre() {
         return nombre;
