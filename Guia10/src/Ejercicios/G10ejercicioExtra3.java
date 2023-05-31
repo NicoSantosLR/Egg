@@ -15,7 +15,7 @@ public class G10ejercicioExtra3 {
         
         boolean ask = true;
         do {
-            
+            ask = sc.next().equalsIgnoreCase("s");
         } while (ask);
         
     }
