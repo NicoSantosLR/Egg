@@ -23,18 +23,37 @@ public class G12ejercicio2y3 {
         tele1.crearTelevisor();
         tele1.precioFinal();
         System.out.println(tele1);
-        */
-        /*
-        Siguiendo el ejercicio anterior, en el main vamos a crear un ArrayList de Electrodomésticos
-para guardar 4 electrodomésticos, ya sean lavadoras o televisores, con valores ya asignados.
-Luego, recorrer este array y ejecutar el método precioFinal() en cada electrodoméstico. Se
-deberá también mostrar el precio de cada tipo de objeto, es decir, el precio de todos los
-televisores y el de las lavadoras. Una vez hecho eso, también deberemos mostrar, la suma del
-precio de todos los Electrodomésticos. Por ejemplo, si tenemos una lavadora con un precio de
-2000 y un televisor de 5000, el resultado final será de 7000 (2000+5000) para
-electrodomésticos, 2000 para lavadora y 5000 para televisor.
-        */
+         */
+        ///* Ejercicio 3
         ArrayList<Electrodomesticos> electros = new ArrayList<>();
+        Lavadora lava1 = new Lavadora(10.5, 4200d, "blanco", "a", 15d);
+        Lavadora lava2 = new Lavadora(8.5, 3200d, "negro", "b", 12d);
+        Televisor tele3 = new Televisor(44d, true, 3300d, "negro", "a", 5d);
+        Televisor tele4 = new Televisor(32d, false, 2800d, "blanco", "b", 4d);
+        electros.add(lava1);
+        electros.add(lava2);
+        electros.add(tele3);
+        electros.add(tele4);
+        double sumaTeles = 0;
+        double sumaLavadoras = 0;
+        for (Electrodomesticos electro : electros) {
+            if (electro instanceof Lavadora) {
+                electro.precioFinal();
+                sumaLavadoras += electro.getPrecio();
+            }
+            if (electro instanceof Televisor) {
+                electro.precioFinal();
+                sumaTeles += electro.getPrecio();
+            }
+        }
+        System.out.println("Lavadoras: $" + sumaLavadoras);
+        System.out.println("Televisores: $" + sumaTeles);
+        System.out.println("Total = $" + (sumaLavadoras + sumaTeles));
+        System.out.println("");
+        for (Electrodomesticos electro : electros) {
+            System.out.println(electro);
+        }
+        //*/
     }
 
 }
