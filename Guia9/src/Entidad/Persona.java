@@ -2,8 +2,8 @@ package Entidad;
 
 import java.util.Date;
 
-
 public class Persona {
+
     private String nombre;
     private Date fechaNacimiento;
 
@@ -30,6 +30,5 @@ public class Persona {
     public void setFechaNacimiento(Date fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
-    
-    
+
 }

@@ -1,8 +1,7 @@
 package Entidad;
 
-
 public class Estudiante {
-    
+
     private String nombre;
     private double nota;
 
@@ -29,5 +28,5 @@ public class Estudiante {
     public void setNota(double nota) {
         this.nota = nota;
     }
-    
+
 }

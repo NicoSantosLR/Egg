@@ -14,23 +14,64 @@ amarre y el barco que lo ocupará*/
     private String posAmarre;
     private Barco barco;
 
-    /*
-    Date fechaActual = new Date();
-
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(fechaActual);
-
-        int diasASumar = 7; // Número de días a sumar
-        calendar.add(Calendar.DAY_OF_YEAR, diasASumar);
-
-        Date nuevaFecha = calendar.getTime();
-
-        System.out.println("Fecha actual: " + fechaActual);
-        System.out.println("Nueva fecha después de sumar 7 días: " + nuevaFecha);
+    public Alquiler() {
     }
-}
-     */
-    public void calcularDias() {
-        
+
+    public Alquiler(String nombreCliente, String dni, Date fechaAlquiler, Date fechaDevolucion, String posAmarre, Barco barco) {
+        this.nombreCliente = nombreCliente;
+        this.dni = dni;
+        this.fechaAlquiler = fechaAlquiler;
+        this.fechaDevolucion = fechaDevolucion;
+        this.posAmarre = posAmarre;
+        this.barco = barco;
     }
+
+    public String getNombreCliente() {
+        return nombreCliente;
+    }
+
+    public void setNombreCliente(String nombreCliente) {
+        this.nombreCliente = nombreCliente;
+    }
+
+    public String getDni() {
+        return dni;
+    }
+
+    public void setDni(String dni) {
+        this.dni = dni;
+    }
+
+    public Date getFechaAlquiler() {
+        return fechaAlquiler;
+    }
+
+    public void setFechaAlquiler(Date fechaAlquiler) {
+        this.fechaAlquiler = fechaAlquiler;
+    }
+
+    public Date getFechaDevolucion() {
+        return fechaDevolucion;
+    }
+
+    public void setFechaDevolucion(Date fechaDevolucion) {
+        this.fechaDevolucion = fechaDevolucion;
+    }
+
+    public String getPosAmarre() {
+        return posAmarre;
+    }
+
+    public void setPosAmarre(String posAmarre) {
+        this.posAmarre = posAmarre;
+    }
+
+    public Barco getBarco() {
+        return barco;
+    }
+
+    public void setBarco(Barco barco) {
+        this.barco = barco;
+    }
+
 }

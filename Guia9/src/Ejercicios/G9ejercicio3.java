@@ -1,4 +1,3 @@
-
 package Ejercicios;
 
 import Servicio.ArregloService;
@@ -8,7 +7,7 @@ public class G9ejercicio3 {
     public static void main(String[] args) {
         double[] arregloA = new double[50];
         double[] arregloB = new double[20];
-        
+
         ArregloService servicio = new ArregloService();
         System.out.println("Inicializar arreglo A");
         servicio.inicializarA(arregloA);

@@ -34,18 +34,18 @@ public class FechaService {
 
     public void diferencia(Date fecha1, Date fecha2) {
         System.out.println("Diferencia de años:");
-        System.out.println(fecha2.getYear()-fecha1.getYear());
+        System.out.println(fecha2.getYear() - fecha1.getYear());
     }
 
     public int diferencia2(Date fechaNacimiento, Date fechaActual) {
         int anios = fechaActual.getYear() - fechaNacimiento.getYear();
-        if (fechaNacimiento.getMonth() > fechaActual.getMonth() ||
-                (fechaNacimiento.getMonth() == fechaActual.getMonth() && fechaNacimiento.getDate() > fechaActual.getDate())) {
+        if (fechaNacimiento.getMonth() > fechaActual.getMonth()
+                || (fechaNacimiento.getMonth() == fechaActual.getMonth() && fechaNacimiento.getDate() > fechaActual.getDate())) {
             anios--;
         }
         return anios;
     }
-    
+
     public static int diferencia3(Date fechaNacimiento, Date fechaActual) {
         long diff = fechaActual.getTime() - fechaNacimiento.getTime();
         long diffYears = diff / (24 * 60 * 60 * 1000) / 365; // calcula la diferencia en años

@@ -68,6 +68,5 @@ public class Curso {
     public void setAlumnos(String[] alumnos) {
         this.alumnos = alumnos;
     }
-    
-    
+
 }

@@ -32,7 +32,7 @@ public class ParDeNumerosService {
 
     public void calculaRaiz(ParDeNumeros numeros) {
         int abs;
-        if (numeros.getNumero1()>numeros.getNumero2()) {
+        if (numeros.getNumero1() > numeros.getNumero2()) {
             abs = (int) Math.round(numeros.getNumero2());
         } else {
             abs = (int) Math.round(numeros.getNumero1());

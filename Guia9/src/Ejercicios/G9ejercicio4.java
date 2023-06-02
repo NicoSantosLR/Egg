@@ -1,4 +1,3 @@
-
 package Ejercicios;
 
 import Servicio.FechaService;
@@ -15,7 +14,7 @@ public class G9ejercicio4 {
         edad.diferencia(usuario, fechaActual);
         System.out.println("Edad:");
         System.out.println(edad.diferencia2(usuario, fechaActual));
-        
+
     }
 
 }

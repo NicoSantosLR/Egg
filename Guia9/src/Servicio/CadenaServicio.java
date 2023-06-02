@@ -103,8 +103,8 @@ public class CadenaServicio {
         }
         System.out.println(fraseReemplazada);
     }
-    
-    public void remplazarLaA(Cadena cadena, String letraNuevaParaLaA) { 
+
+    public void remplazarLaA(Cadena cadena, String letraNuevaParaLaA) {
 
         if (cadena.getFrase().toLowerCase().contains("a")) {
             cadena.setFrase(cadena.getFrase().replace("a", letraNuevaParaLaA));
@@ -115,7 +115,7 @@ public class CadenaServicio {
     }
 
     public boolean contiene(Cadena c, String letraUsuario) {
-        
+
         boolean contiene = false;
         for (int i = 0; i < c.getLongitud(); i++) {
             String letra = c.getFrase().substring(i, i + 1);
@@ -126,8 +126,8 @@ public class CadenaServicio {
         }
         return contiene;
     }
-    
-    public boolean contiene2(Cadena cadena, String letra) { 
+
+    public boolean contiene2(Cadena cadena, String letra) {
         boolean contiene = false;
         if (cadena.getFrase().contains(letra)) {
             System.out.println("Si la contiene ");

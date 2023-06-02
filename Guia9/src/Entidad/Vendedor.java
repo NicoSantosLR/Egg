@@ -7,6 +7,7 @@ import java.util.Date;
  * @author rgalan
  */
 public class Vendedor { //OBJETO VENDEDOR
+
     /*A CONTINUACION CREAMOS LOS ATRIBUTOS DEL OBJETO VENDEDOR
     ==========================================================*/
     private String nombre;
@@ -15,7 +16,7 @@ public class Vendedor { //OBJETO VENDEDOR
     private Double comisiones;
     private Double sueldoMensual;
     private Date fechaInicio;
-    
+
     /*A PARTIR DE AQUI COMENZAMOS A CREAR LOS CONSTRUCTORES , GETTER Y 
     SETTER*/
     // 1°-Constructor por defecto o vacio
@@ -23,7 +24,7 @@ public class Vendedor { //OBJETO VENDEDOR
     }
     //2°-Constructor por parametros
 
-    public Vendedor(String nombre, Integer dni, Double sueldoBasico, 
+    public Vendedor(String nombre, Integer dni, Double sueldoBasico,
             Double comisiones, Double sueldoMensual, Date fechaInicio) {
         this.nombre = nombre;
         this.dni = dni;
@@ -81,16 +82,17 @@ public class Vendedor { //OBJETO VENDEDOR
     public void setFechaInicio(Date fechaInicio) {
         this.fechaInicio = fechaInicio;
     }
+
     /*RETORNAMOS UNA IMPRESION DEL OBJETO CON TODOS SUS DATOS (ATRIBUTOS) 
     DETALLADOS
-    */
+     */
     @Override
     public String toString() {
-        return "Vendedor{" + "nombre=" + nombre + ", dni=" + dni +
-        ", sueldoBasico=" + sueldoBasico + ", comisiones=" + comisiones + 
-        ", sueldoMensual=" + sueldoMensual + ", fechaInicio=" + 
-                fechaInicio + '}';
-        
+        return "Vendedor{" + "nombre=" + nombre + ", dni=" + dni
+                + ", sueldoBasico=" + sueldoBasico + ", comisiones=" + comisiones
+                + ", sueldoMensual=" + sueldoMensual + ", fechaInicio="
+                + fechaInicio + '}';
+
     }
-    
+
 }
