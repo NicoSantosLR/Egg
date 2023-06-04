@@ -25,4 +25,9 @@ public class BarcosMotor extends Barco {
         super.calcularModulo();
         modulo += potenciaCV;
     }
+
+    @Override
+    public String toString() {
+        return "Barco a Motor\n" + super.toString() + "Potencia: " + potenciaCV + " CV\n";
+    }
 }

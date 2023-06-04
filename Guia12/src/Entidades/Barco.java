@@ -49,7 +49,6 @@ public class Barco {
     public void setModulo(int modulo) {
         this.modulo = modulo;
     }
-    
 
     public void calcularModulo() {
         modulo = eslora * 10;
@@ -57,7 +56,7 @@ public class Barco {
 
     @Override
     public String toString() {
-        return "Barco{" + "matricula=" + matricula + ", eslora=" + eslora + ", anioFabricacion=" + anioFabricacion + '}';
+        return "Matricula: " + matricula + "\nEslora: " + eslora + " m\nAño de Fabricación: " + anioFabricacion + "\nModulo: " + modulo + "\n";
     }
 
 }

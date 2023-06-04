@@ -23,6 +23,11 @@ public class Yates extends BarcosMotor {
     @Override
     public void calcularModulo() {
         super.calcularModulo();
-        modulo += potenciaCV + camarotes;
+        modulo += camarotes;
+    }
+
+    @Override
+    public String toString() {
+        return "Yate tipo " + super.toString() + "Camarotes: " + camarotes + "\n";
     }
 }

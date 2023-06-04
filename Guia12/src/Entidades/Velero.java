@@ -12,7 +12,6 @@ public class Velero extends Barco {
         this.cantMastiles = cantMastiles;
     }
 
-
     public int getCantMastiles() {
         return cantMastiles;
     }
@@ -20,10 +19,15 @@ public class Velero extends Barco {
     public void setCantMastiles(int cantMastiles) {
         this.cantMastiles = cantMastiles;
     }
-    
+
     @Override
-    public void calcularModulo(){
+    public void calcularModulo() {
         super.calcularModulo();
         modulo += cantMastiles;
+    }
+
+    @Override
+    public String toString() {
+        return "Velero\n" + super.toString() + "Cantidad de mastiles: " + cantMastiles + "\n";
     }
 }

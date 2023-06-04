@@ -1,8 +1,10 @@
-
 package Ejercicios;
 
+import Servicios.AlquilerService;
+
 public class G12ejercicioExtra1 {
-/*
+
+    /*
     En un puerto se alquilan amarres para barcos de distinto tipo. Para cada Alquiler se guarda: el
 nombre, documento del cliente, la fecha de alquiler, fecha de devolución, la posición del
 amarre y el barco que lo ocupará.
@@ -21,9 +23,13 @@ el número de camarotes.
 Utilizando la herencia de forma apropiada, deberemos programar en Java, las clases y los
 métodos necesarios que permitan al usuario elegir el barco que quiera alquilar y mostrarle el
 precio final de su alquiler.
-    */
+     */
     public static void main(String[] args) {
-        
+        AlquilerService service = new AlquilerService();
+
+        service.crearAlquiler();
+        System.out.println("----------------------");
+        service.resumen();
     }
 
 }

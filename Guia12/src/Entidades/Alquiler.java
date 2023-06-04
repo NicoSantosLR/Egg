@@ -74,4 +74,9 @@ amarre y el barco que lo ocupará*/
         this.barco = barco;
     }
 
+    @Override
+    public String toString() {
+        return "Alquiler Resumen\nNombre del cliente: " + nombreCliente + "\nDNI: " + dni + "\nFecha de Alquiler: " + fechaAlquiler
+                + "\nFecha de Devolucion: " + fechaDevolucion + "\nPosición de amarre: " + posAmarre + "\n" + barco;
+    }
 }
