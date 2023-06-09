@@ -27,6 +27,7 @@ public class PeliculaService {
         int duracion =sc.nextInt();
         System.out.println("Edad mínima permitida:");
         int edadMinima = sc.nextInt();
+        System.out.println("Ingrese director:");
         String director = sc.next();
         return new Pelicula(titulo, duracion, edadMinima, director);
     }

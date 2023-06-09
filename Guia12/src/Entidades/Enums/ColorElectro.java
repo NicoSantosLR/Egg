@@ -1,4 +1,4 @@
-package Entidades;
+package Entidades.Enums;
 
 public enum ColorElectro {
     blanco, negro, rojo, azul, gris;

@@ -1,5 +1,6 @@
 package Entidades;
 
+import Entidades.Enums.ColorElectro;
 import java.util.Scanner;
 
 public class Electrodomesticos {

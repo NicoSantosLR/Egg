@@ -3,16 +3,18 @@ package Ejercicios;
 import Entidad.Persona;
 import Servicio.PersonaService;
 
-// commit
 public class G8ejercicio3 {
 
     public static void main(String[] args) {
         PersonaService servicio = new PersonaService();
-        int[] IMC = new int[4];
-        boolean[] edades = new boolean[4];
-//        Persona persona1 = servicio.crearPersona();
+        //int[] IMC = new int[4];
+        //boolean[] edades = new boolean[4];
+        Persona persona1 = servicio.crearPersona();
+        Persona vacia = null;
 //        System.out.println(servicio.calcularIMC(persona1));
 //        System.out.println(servicio.esMayorDeEdad(persona1));
+
+/*
         Persona persona1 = new Persona("Yasar", 29, "h", 114, 1.79);
         System.out.println(persona1);
         System.out.println(servicio.calcularIMC(persona1));
@@ -43,7 +45,7 @@ public class G8ejercicio3 {
 
         calcularPromedioIMC(IMC);
         calcularPromedioEdad(edades);
-
+*/
     }
 
     public static void calcularPromedioIMC(int[] IMC) {

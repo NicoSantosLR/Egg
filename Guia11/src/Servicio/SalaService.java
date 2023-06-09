@@ -4,6 +4,7 @@ import Entidad.Butaca;
 import Entidad.Pelicula;
 import Entidad.Sala;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 public class SalaService {
@@ -64,9 +65,29 @@ public class SalaService {
             }
         }
     }
-    
-    public void ubicarEspectadores(){
-        
+
+    public void ubicarEspectadores() {
+        Butaca[][] butacas = sala.getButacas();
+        for (int i = 0; i < butacas.length; i++) {
+            for (int j = 0; j < butacas[i].length; j++) {
+                Random rd = new Random();
+                int numeroRandom = rd.nextInt(2);
+                if (numeroRandom == 0) {
+                    butacas[i][j].setOcupado(true);
+                } else {
+                    butacas[i][j].setOcupado(false);
+                }
+            }
+        }
+    }
+
+    public void vaciarSala() {
+        Butaca[][] butacas = sala.getButacas();
+        for (int i = 0; i < butacas.length; i++) {
+            for (int j = 0; j < butacas[i].length; j++) {
+                butacas[i][j].setOcupado(false);
+            }
+        }
     }
 
     public void menu() {
@@ -119,8 +140,11 @@ public class SalaService {
                     }
                     break;
                 case 7:
+                    ubicarEspectadores();
+                    System.out.println("Espectadores ubicados aleatoriamente");
                     break;
                 case 8:
+                    vaciarSala();
                     break;
                 case 9:
                     System.out.println("Saliendo....");
